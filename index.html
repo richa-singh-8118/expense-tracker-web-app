@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expense Tracker</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<!-- Flatpickr CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/style.css">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Expense Tracker</h2>
+    <div class="form">
+        <input type="number" id="amount" placeholder="Amount">
+        <input type="text" id="category" placeholder="Category">
+        <input type="text" id="month" placeholder="Select Month">
+        <button onclick="addExpense()">Add Expense</button>
+    </div>
+    <hr>
+    <input type="text" id="filter-month" placeholder="Filter by Month">
+    <button onclick="filterByMonth()">Filter</button>
+    <h3>Total: ₹<span id="total">0</span></h3>
+    <ul id="expense-list"></ul>
+    <h3>Category Totals</h3>
+    <ul id="category-total"></ul>
+    <canvas id="expenseChart" height="200"></canvas>
+</div>
+
+<!-- JS Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Custom JS -->
+<script src="script.js"></script>
+</body>
+</html>
